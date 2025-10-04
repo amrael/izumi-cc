@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | いづみ園芸</title>
+    <meta name="keywords" content="造園,植木屋,横須賀,外構,庭,三浦,鎌倉,横浜,エクステリア,ガーデニング,問い合わせ,連絡先">
+    <meta name="description" content="いづみ園芸へのお問い合わせページ。お電話、FAX、メールにてお気軽にお問い合わせください。">
+    <link rel="icon" type="image/png" sizes="32x32" href="_images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="_images/apple-touch-icon.png">
+    <link href="_css/modern.css" rel="stylesheet" type="text/css">
+    <style>
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-intro {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .contact-intro h2 {
+            color: #2c5f2d;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-intro p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-method {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .contact-method .icon {
+            font-size: 56px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-method h3 {
+            color: #2c5f2d;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-method .info {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .contact-method .info a {
+            color: #2c5f2d;
+            text-decoration: none;
+        }
+        
+        .contact-method .info a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-method .details {
+            color: #666;
+            line-height: 1.8;
+            margin-top: 15px;
+        }
+        
+        .contact-method .hours {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2c5f2d;
+        }
+        
+        .inquiry-types {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .inquiry-types h2 {
+            color: #2c5f2d;
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .inquiry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .inquiry-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5f2d;
+        }
+        
+        .inquiry-card h3 {
+            color: #2c5f2d;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .inquiry-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        
+        .inquiry-card a {
+            color: #2c5f2d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .inquiry-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .map-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .map-section h2 {
+            color: #2c5f2d;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .address-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .address-info p {
+            color: #333;
+            line-height: 1.8;
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .inquiry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="twoColFixRtHdr">
+    <div id="container">
+        <div id="header">
+            <div id="ci">
+                <a href="index.html" title="IZUMI" class="logo-container">
+                    <div class="logo-icon">
+                        <img src="_images/logo-icon.png" alt="いづみ園芸ロゴ" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                    </div>
+                    <div class="logo-text">いづみ園芸</div>
+                </a>
+            </div>
+            <div id="mainNavi">
+                <a href="index.html" target="_top" class="nav-item">
+                    <div class="nav-icon">🏠</div>
+                    <span>ホーム</span>
+                </a>
+                <a href="info.html" target="_top" class="nav-item">
+                    <div class="nav-icon">🏢</div>
+                    <span>会社案内</span>
+                </a>
+                <a href="works.html" target="_top" class="nav-item">
+                    <div class="nav-icon">🌳</div>
+                    <span>施工実績</span>
+                </a>
+                <a href="request4quotation.html" target="_top" class="nav-item">
+                    <div class="nav-icon">📋</div>
+                    <span>見積依頼</span>
+                </a>
+                <a href="contact.html" target="_top" class="nav-item active">
+                    <div class="nav-icon">📞</div>
+                    <span>お問合せ</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="mainContent">
+            <div class="main-content-wrapper">
+                <div class="main-content-primary">
+                    <div class="breadcrumb">
+                        <a href="index.html">ホーム</a> &gt; お問い合わせ
+                    </div>
+
+                    <h1 style="font-size: 32px; color: #2c5f2d; margin-bottom: 30px;">お問い合わせ</h1>
+
+                    <div class="contact-container">
+                        <div class="contact-intro">
+                            <h2>📞 お気軽にお問い合わせください</h2>
+                            <p>ご不明な点やご相談がございましたら、お電話・FAX・メールにてお気軽にお問い合わせください。</p>
+                            <p>土日祝日も対応しております。</p>
+                        </div>
+
+                        <div class="contact-grid">
+                            <div class="contact-method">
+                                <div class="icon">📞</div>
+                                <h3>お電話</h3>
+                                <div class="info">
+                                    <a href="tel:0468361741">046-836-1741</a>
+                                </div>
+                                <div class="hours">土日祝日含む 8:00 - 21:00</div>
+                                <div class="details">
+                                    <p>常に代表者が直接お電話に対応できるよう、日中は携帯電話に転送しています。</p>
+                                    <p>万が一つながらない場合は、時間をおいて再度おかけ直しいただくか、下記のお問い合わせフォームまたはFAXをご利用ください。</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="icon">📠</div>
+                                <h3>FAX</h3>
+                                <div class="info">046-848-0454</div>
+                                <div class="hours">24時間受付</div>
+                                <div class="details">
+                                    <p>お問い合わせや見積依頼をFAXでもお受けしております。</p>
+                                    <p><strong>返信用のお客様の連絡先（電話番号またはFAX番号）</strong>のご記入をお忘れないようにご注意ください。</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="icon">📧</div>
+                                <h3>お問い合わせフォーム</h3>
+                                <div class="hours">24時間受付（2営業日以内に返信）</div>
+                                <div class="details">
+                                    <p>下記のお問い合わせフォームからご連絡ください。</p>
+                                    <p>お名前、メールアドレス、お問い合わせ内容を入力してお送りください。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inquiry-types">
+                            <h2>お問い合わせ内容別のご案内</h2>
+                            <div class="inquiry-grid">
+                                <div class="inquiry-card">
+                                    <h3>📋 見積依頼</h3>
+                                    <p>造園・外構工事や剪定など、各種作業の見積をご希望の方</p>
+                                    <p><a href="request4quotation.html">→ 見積依頼フォームへ</a></p>
+                                </div>
+                                <div class="inquiry-card">
+                                    <h3>🌿 サービスに関するご質問</h3>
+                                    <p>植物の相談、サービス内容、料金についてのご質問など</p>
+                                    <p>下記のお問い合わせフォームをご利用ください</p>
+                                </div>
+                                <div class="inquiry-card">
+                                    <h3>📞 お急ぎの場合</h3>
+                                    <p>緊急のご依頼やお急ぎのご相談</p>
+                                    <p>お電話が最も早くご対応できます</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- お問い合わせフォーム -->
+                        <div style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 40px;">
+                            <h2 style="color: #2c5f2d; font-size: 28px; margin-bottom: 20px; text-align: center;">📧 お問い合わせフォーム</h2>
+                            <p style="text-align: center; color: #666; margin-bottom: 30px;">お気軽にお問い合わせください。2営業日以内にご返信いたします。</p>
+                            
+                            <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #1976d2;">
+                                <p style="color: #1565c0; font-weight: bold; margin-bottom: 10px;">💡 お問い合わせ種別の選択</p>
+                                <p style="color: #333; font-size: 14px; line-height: 1.7;">
+                                    フォーム内の「<strong>お問い合わせ種別</strong>」で該当する内容を選択してください。<br>
+                                    見積をご希望の場合は「見積依頼」を選択してください。
+                                </p>
+                            </div>
+                            
+                            <!-- Formrun埋め込み（スクリプト方式） -->
+                            <script src="https://sdk.form.run/js/v2/embed.js"></script>
+                            <div
+                                class="formrun-embed"
+                                data-formrun-form="@izumi-XbWDdajl0TofNoIjFmJZ"
+                                data-formrun-redirect="true">
+                            </div>
+                        </div>
+
+                        <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 20px;">
+                            <h3 style="color: #856404; font-size: 18px; margin-bottom: 10px;">⚠️ ご注意ください</h3>
+                            <ul style="color: #856404; line-height: 1.8; margin: 0; padding-left: 20px;">
+                                <li>緊急のご依頼の場合は、お電話が最も早くご対応できます。</li>
+                                <li>営業時間外のお問い合わせは、翌営業日に順次ご対応させていただきます。</li>
+                                <li>見積依頼は<a href="request4quotation.html" style="color: #856404; font-weight: bold; text-decoration: underline;">専用フォーム</a>をご利用ください。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br class="clearfloat">
+
+        <div id="footer">
+            <div id="sitemap">
+                <div class="column">
+                    <h3>いづみ園芸</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="info.html">会社概要</a></li>
+                        <li><a href="works.html">施工実績</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>お問い合わせ</h3>
+                    <ul>
+                        <li><a href="request4quotation.html">無料見積依頼</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li>電話: 046-836-1741</li>
+                    </ul>
+                </div>
+            </div>
+            <br class="clearfloat">
+            <div id="copyright">Copyright&copy; <span data-auto-year>2024</span> いづみ園芸 All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <!-- Auto-update script for copyright and experience years -->
+    <script src="_javascript/auto-update.js"></script>
+</body>
+</html>
+
