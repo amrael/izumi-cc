@@ -20,6 +20,33 @@ Liquid Glass Design - 水面のような透明感のある洗練されたデザ�
 - **レスポンシブデザイン**（モバイルファースト）
 - **静的サイト**（GitHub Pages対応）
 
+## 🚀 開発とデプロイメント
+
+### Git リポジトリ
+
+- **リモートリポジトリ**: `git@github.com:amrael/izumi-cc.git`
+- **ブランチ**: `main`
+- **作業ディレクトリ**: このディレクトリ（`izumi-cc/`）
+
+### デプロイメント手順
+
+```bash
+# 変更をステージング
+git add .
+
+# コミット
+git commit -m "コミットメッセージ"
+
+# プッシュ（GitHub Pagesに自動デプロイ）
+git push
+```
+
+### GitHub Pages 設定
+
+- **カスタムドメイン**: izumi.cc
+- **HTTPS**: 有効
+- **デプロイ**: `main`ブランチから自動デプロイ
+
 ## 🔗 リンク
 
 - **ウェブサイト**: https://izumi.cc
