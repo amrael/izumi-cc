@@ -459,12 +459,19 @@ body::after {
         url('../_images/hero-background.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Default: parallax effect for desktop browsers */
     position: relative;
     min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* iOS Safari fix: background-attachment: fixed is not supported */
+@supports (-webkit-touch-callout: none) {
+    #homeCenterImage {
+        background-attachment: scroll;
+    }
 }
 
 #homeCenterImage::before {
