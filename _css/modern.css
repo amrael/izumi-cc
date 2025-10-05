@@ -229,6 +229,18 @@ body::after {
     gap: 30px;
     position: relative;
     overflow: hidden;
+    min-height: 110px; /* Prevent height collapse on iOS Safari */
+}
+
+/* iOS Safari fix: Disable animations that cause layout issues */
+@supports (-webkit-touch-callout: none) {
+    #header {
+        min-height: 110px;
+    }
+    
+    #header::before {
+        animation: none !important;
+    }
 }
 
 #header::before {
@@ -270,6 +282,7 @@ body::after {
     align-items: center;
     gap: 15px;
     flex-shrink: 0;
+    min-width: fit-content; /* Prevent shrinking on iOS Safari */
 }
 
 .logo-container {
@@ -347,6 +360,8 @@ body::after {
     justify-content: flex-end;
     position: relative;
     z-index: 10;
+    flex-shrink: 0; /* Prevent shrinking on iOS Safari */
+    min-width: fit-content;
 }
 
 .nav-item {
@@ -367,6 +382,7 @@ body::after {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    flex-shrink: 0; /* Prevent button shrinking on iOS Safari */
 }
 
 .nav-item::before {
