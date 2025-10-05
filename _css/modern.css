@@ -232,17 +232,6 @@ body::after {
     min-height: 110px; /* Prevent height collapse on iOS Safari */
 }
 
-/* iOS Safari fix: Disable animations that cause layout issues */
-@supports (-webkit-touch-callout: none) {
-    #header {
-        min-height: 110px;
-    }
-    
-    #header::before {
-        animation: none !important;
-    }
-}
-
 #header::before {
     content: '';
     position: absolute;
@@ -256,7 +245,7 @@ body::after {
         rgba(63, 148, 117, 0.85) 70%, 
         rgba(92, 184, 143, 0.75) 100%);
     z-index: -1;
-    animation: floatGently 20s ease-in-out infinite;
+    /* animation removed: caused layout issues across all browsers */
 }
 
 #header::after {
