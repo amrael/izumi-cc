@@ -510,7 +510,7 @@ body::after {
         inset 0 -1px 0 rgba(26, 77, 62, 0.08);
     margin: 30px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: floatGently 20s ease-in-out infinite;
+    /* animation removed: caused layout issues */
     overflow: hidden;
 }
 
@@ -633,7 +633,7 @@ body::after {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(92, 184, 143, 0.08) 0%, transparent 60%);
-    animation: floatGently 30s ease-in-out infinite;
+    /* animation removed: caused layout issues */
     pointer-events: none;
 }
 
@@ -763,7 +763,7 @@ body::after {
         rgba(63, 148, 117, 0.88) 70%, 
         rgba(92, 184, 143, 0.78) 100%);
     z-index: -2;
-    animation: floatGently 25s ease-in-out infinite;
+    /* animation removed: caused layout issues */
 }
 
 #footer::after {
@@ -873,7 +873,7 @@ body::after {
         rgba(92, 184, 143, 0.78) 100%);
     border-radius: var(--radius-fluid-large);
     z-index: -2;
-    animation: floatGently 18s ease-in-out infinite;
+    /* animation removed: caused layout issues */
 }
 
 #heroSection::after {
@@ -1195,7 +1195,7 @@ body::after {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(63, 148, 117, 0.06) 0%, transparent 60%);
-    animation: floatGently 28s ease-in-out infinite reverse;
+    /* animation removed: caused layout issues */
     pointer-events: none;
 }
 
@@ -1793,7 +1793,7 @@ body::after {
         rgba(92, 184, 143, 0.75) 100%);
     border-radius: var(--radius-fluid-large);
     z-index: -2;
-    animation: floatGently 22s ease-in-out infinite;
+    /* animation removed: caused layout issues */
 }
 
 #ctaSection::after {
@@ -2117,7 +2117,7 @@ body::after {
     box-shadow: var(--shadow-liquid);
     position: relative;
     overflow: hidden;
-    animation: floatGently 25s ease-in-out infinite;
+    /* animation removed: caused layout issues */
 }
 
 .company-intro::before {
@@ -2165,7 +2165,7 @@ body::after {
     box-shadow: var(--shadow-liquid);
     position: relative;
     overflow: hidden;
-    animation: floatGently 28s ease-in-out infinite reverse;
+    /* animation removed: caused layout issues */
 }
 
 .company-info-section::before {
@@ -2262,7 +2262,7 @@ body::after {
     box-shadow: var(--shadow-liquid);
     position: relative;
     overflow: hidden;
-    animation: floatGently 30s ease-in-out infinite;
+    /* animation removed: caused layout issues */
 }
 
 .services-section::before {
